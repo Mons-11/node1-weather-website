@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/weather.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="./css/style.css">
+ 
+</head>
+<body>
+    <div class="main_div">
+        {{>header}}
+         <br>
+         <p>Use this site to get the weather report of a particular location!</p>
+         <br>
+         <p>Enter location and click on search</p>
+       
+
+         <form>
+             <input placeholder="Enter location">
+             <button>Search</button>
+         </form>
+
+         <p id="msg1"></p>
+         <p id="msg2"></p>
+
+    </div>
+   
+
+    {{>footer}}    
+       <script src="./js_files/apps.js"></script>
+</body>
+</html>
