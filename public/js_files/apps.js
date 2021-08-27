@@ -28,8 +28,6 @@ search_btn.addEventListener('click',(e)=>{
 
 })
 
-console.log('Client side message loaded.');
-
 fetch('https://puzzle.mead.io/puzzle').then((response)=>{
     response.json().then((data)=>{
         console.log(data);
