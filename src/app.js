@@ -16,6 +16,8 @@ const viewPath=path.join(__dirname,'../template/views');
 const partialPath=path.join(__dirname,'../template/partials')
 
 const app =express()
+const port= process.env.PORT || 3000
+
 //Setup handlebars engine and views location
 app.set('view engine','hbs')
 app.set('views',viewPath);
@@ -120,6 +122,6 @@ app.get('*',(req,res)=>{
         name:'Mononita'
     })
 })
-app.listen(3000, ()=>{
-    console.log("Server is up on port 3000");
+app.listen(port, ()=>{
+    console.log("Server is up on port"+port);
 })

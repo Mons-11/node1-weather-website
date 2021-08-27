@@ -7,7 +7,7 @@ search_btn.addEventListener('click',(e)=>{
     e.preventDefault();
     msg1.textContent='Loading...'
     msg2.textContent=' '
-    const url='http://localhost:3000/weather?address='+search.value
+    const url='/weather?address='+search.value
 
     fetch(url).then((response)=>{
 
