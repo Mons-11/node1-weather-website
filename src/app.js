@@ -5,11 +5,6 @@ const geocode=require('./utils/geocode.js')
 const weathercode=require('./utils/weather_code.js')
 
 
-console.log(__dirname);
-//console.log(__filename);
-//console.log(path.join(__dirname,'../..'))//go up two folders
-console.log(path.join(__dirname,'../public'));//path.join comes from core module require('path')
-
 //Definepaths for express config
 const mainDir=path.join(__dirname,'../public');
 const viewPath=path.join(__dirname,'../template/views');
@@ -29,33 +24,17 @@ app.use(express.static(mainDir))
 app.get('',(req,res)=>{
     res.render('index',{
         title:"Weather Report",
-        name:"Mononita Mahato"
+        name:"https://mons-weather-application.herokuapp.com/"
     })
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:'About Me',
-        name:"Mononita"
+        title:'About',
+        name:"https://mons-weather-application.herokuapp.com/"
     })
 })
 
-
-// app.get('',(req,res)=>{
-//     res.send('<h1>Hello Express!</h1>')
-// })    //It wont be used as node will go through the index.html match..
-
-
-app.get('/help',(req,res)=>{
-    res.send({
-        name:'Mononita',
-        age:24})
-})
-
-
-// app.get('/about',(req,res)=>{
-//     res.send('<h1>About Page<h1>')
-// })
 
 app.get('/weather',(req,res)=>{
 
@@ -91,17 +70,6 @@ app.get('/weather',(req,res)=>{
     
 })
 
-app.get('/products',(req,res)=>{
-    if(!req.query.search){
-        return res.send({
-            Error:"You must provide search option."
-        })
-    }
-
-    res.send({
-        products:[]
-    })
-})
 //app.com
 //app.com/help
 //app.com/about
